@@ -1,0 +1,51 @@
+.details {
+  &__address {
+    color: var(--text-dark);
+    display: block;
+    padding: 1rem 0.75rem;
+  }
+  &__city,
+  &__phone {
+    margin-bottom: 1.5rem;
+  }
+  &__header {
+    align-items: center;
+    background-color: var(--green-darker);
+    color: white;
+    display: grid;
+    min-height: 3.75rem;
+    padding: 0.75rem;
+    h2 {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    p {
+      font-size: 0.75rem;
+    }
+  }
+  &__list {
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+.map {
+  background: #cdcdcd;
+  height: 11.25rem;
+  width: 100%;
+  &__marker {
+    &--active {
+      background-color: white;
+      border: 0.25rem solid var(--green-darker);
+      border-radius: 50%;
+      box-shadow: 0 0 0 0.5rem var(--black-10);
+      height: 1.25rem;
+      width: 1.25rem;
+    }
+  }
+}
+@media (min-width: 750px) {
+  .map {
+    height: 40vh;
+  }
+}

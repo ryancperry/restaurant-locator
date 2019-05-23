@@ -1,0 +1,24 @@
+// COLOR MIXINS
+
+@mixin color-variant($color-name, $color) {
+  --#{$color-name}: #{$color};
+  --#{$color-name}-darker: #{mix($color, #000, 75)};
+  --#{$color-name}-light: #{mix($color, #fff, 75)};
+  --#{$color-name}-lighter: #{mix($color, #fff, 50)};
+  --#{$color-name}-lightest: #{mix($color, #fff, 25)};
+}
+@mixin opacity-variant($color-name, $color) {
+  @for $i from 1 through 19 {
+    --#{$color-name}-#{$i * 5}: #{rgba($color, $i * 0.05)};
+  }
+}
+@mixin shade-variant($color-name, $color) {
+  @for $i from 1 through 9 {
+    --#{$color-name}-#{$i * 100}: #{mix($color, black, 100 - $i * 10)};
+  }
+}
+@mixin tint-variant($color-name, $color) {
+  @for $i from 1 through 9 {
+    --#{$color-name}-#{$i * 100}: #{mix($color, white, $i * 10)};
+  }
+}

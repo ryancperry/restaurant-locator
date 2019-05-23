@@ -1,0 +1,44 @@
+.header {
+  align-items: center;
+  background-color: var(--green);
+  display: grid;
+  grid-template-columns: 3rem 1fr 3rem;
+  padding: 1.5rem 0.75rem 0.75rem;
+  h1 {
+    color: white;
+    font-size: 1.0625rem;
+    font-weight: bold;
+    grid-column: 2;
+    text-align: center;
+  }
+  &__back,
+  &__map-toggle {
+    background-color: transparent;
+    border: none;
+  }
+  &__back {
+    grid-column: 1;
+    justify-self: start;
+    img {
+      height: auto;
+      max-height: 2rem;
+      width: 1.5rem;
+    }
+  }
+  &__map-toggle {
+    grid-column: 3;
+    justify-self: end;
+    img {
+      max-height: 2rem;
+      max-width: 100%;
+    }
+  }
+}
+@media (min-width: 750px) {
+  .header {
+    &__back,
+    &__map-toggle {
+      display: none;
+    }
+  }
+}
