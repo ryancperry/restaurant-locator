@@ -15,7 +15,7 @@
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.18.0",
     "google-map-react": "^1.1.4",
-    "next": "^7.0.3",
+    "next": "^9.3.3",
     "node-sass": "^4.11.0",
     "postcss-preset-env": "^6.5.0",
     "react": "^16.8.6",
